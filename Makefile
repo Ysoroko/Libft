@@ -6,7 +6,7 @@
 #    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/17 16:06:56 by ysoroko           #+#    #+#              #
-#    Updated: 2020/11/30 18:36:22 by ysoroko          ###   ########.fr        #
+#    Updated: 2020/12/01 14:45:57 by ysoroko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,21 +81,17 @@ LINK			=	ar rc
 all: 		$(NAME)
 
 $(NAME):	$(MAIN_PART_OBJS)
-			@$(LINK) $(NAME) $(MAIN_PART_OBJS)
-			@echo "\033[1m\033[32mMake Finished \033[0;m"
+			$(LINK) $(NAME) $(MAIN_PART_OBJS)
 
 bonus:		$(OBJS)
-			@$(LINK) $(NAME) $(OBJS)
-			@echo "\033[1m\033[32mBonus Finished \033[0;m"
+			$(LINK) $(NAME) $(OBJS)
 
 clean:
-			@rm -f $(OBJS)
-			@echo "\033[1m\033[32mClean Finished \033[0;m"
+			rm -f $(OBJS)
 
 fclean:		clean
-			@rm -f $(NAME)
+			rm -f $(NAME)
 
 re:			fclean all
-			@echo "\033[1m\033[32mRe finished \033[0;m"
 
 .PHONY:		all clean fclean re bonus
