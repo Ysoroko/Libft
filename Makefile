@@ -6,7 +6,7 @@
 #    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/17 16:06:56 by ysoroko           #+#    #+#              #
-#    Updated: 2020/11/25 14:42:05 by ysoroko          ###   ########.fr        #
+#    Updated: 2020/11/30 18:36:22 by ysoroko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,30 +68,34 @@ BONUS			=	ft_lstadd_back.c \
 					ft_lstnew.c \
 					ft_lstsize.c
 
-MAIN_PART		=	${filter-out ${BONUS}, ${SRC}}
+MAIN_PART		=	$(filter-out $(BONUS), $(SRC))
 
-OBJS			=	${SRC:.c=.o}
+OBJS			=	$(SRC:.c=.o)
 
-MAIN_PART_OBJS	=	${MAIN_PART:.c=.o}
+MAIN_PART_OBJS	=	$(MAIN_PART:.c=.o)
 
 NAME			=	libft.a
 
 LINK			=	ar rc
 
-all: 		${NAME}
+all: 		$(NAME)
 
-${NAME}:	${MAIN_PART_OBJS}
-			${LINK} ${NAME} ${MAIN_PART_OBJS}
+$(NAME):	$(MAIN_PART_OBJS)
+			@$(LINK) $(NAME) $(MAIN_PART_OBJS)
+			@echo "\033[1m\033[32mMake Finished \033[0;m"
 
-bonus:		${OBJS}
-			${LINK} ${NAME} ${OBJS}
+bonus:		$(OBJS)
+			@$(LINK) $(NAME) $(OBJS)
+			@echo "\033[1m\033[32mBonus Finished \033[0;m"
 
 clean:
-			rm -f ${OBJS}
+			@rm -f $(OBJS)
+			@echo "\033[1m\033[32mClean Finished \033[0;m"
 
 fclean:		clean
-			rm -f ${NAME}
+			@rm -f $(NAME)
 
 re:			fclean all
+			@echo "\033[1m\033[32mRe finished \033[0;m"
 
 .PHONY:		all clean fclean re bonus
