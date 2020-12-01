@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 18:03:29 by ysoroko           #+#    #+#             */
-/*   Updated: 2020/11/22 13:19:45 by ysoroko          ###   ########.fr       */
+/*   Updated: 2020/12/01 14:26:43 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	int				len;
 
-	if (s == 0)
+	if (s == 0 || f == 0)
 		return (0);
 	temp_s = (char *)s;
 	i = 0;

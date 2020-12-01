@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 10:34:29 by ysoroko           #+#    #+#             */
-/*   Updated: 2020/11/23 12:31:26 by ysoroko          ###   ########.fr       */
+/*   Updated: 2020/12/01 14:09:01 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 	char	*my_src;
 
 	my_src = (char *)(src);
-	if (my_src == 0)
-		return (0);
 	src_length = ft_strlen(my_src);
 	if (dstsize == 0 || dest == 0)
 	{
