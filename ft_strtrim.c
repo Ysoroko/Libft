@@ -6,7 +6,7 @@
 /*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 16:31:28 by ysoroko           #+#    #+#             */
-/*   Updated: 2020/11/23 13:17:25 by ysoroko          ###   ########.fr       */
+/*   Updated: 2020/12/04 18:09:27 by ysoroko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,8 @@ char				*ft_strtrim(char const *str, char const *except)
 	i = ft_find_i(my_str, my_except) - 1;
 	if (ft_find_j(my_str, my_except) - i <= 0)
 	{
-		ret = malloc(sizeof(char));
+		if(!(ret = malloc(sizeof(char))))
+			return (0);
 		ret[0] = '\0';
 		return (ret);
 	}
