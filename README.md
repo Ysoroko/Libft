@@ -6,4 +6,4 @@ This project covers the use of all the basic variable types and also the manipul
 
 Working with malloc and free, some functions allow to allocate and use the heap memory.
 
-The Makefile is used to easily compile and create the library, as well as to cleanup afterwards.
+The Makefile is used to easily compile and create the library, as well as to clean up afterwards.
