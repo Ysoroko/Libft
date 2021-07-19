@@ -1,5 +1,5 @@
 # Libft
-A project about creating a library containing 44 coded functions that can be useful anywhere, anytime!
+First s19 coding school project about creating a library containing 44 coded functions that can be useful anywhere, anytime!
 
 
 This project covers the use of all the basic variable types and also the manipulation of the linked lists.
